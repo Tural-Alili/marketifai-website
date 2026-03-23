@@ -1,0 +1,23 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"]}
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/assets/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
