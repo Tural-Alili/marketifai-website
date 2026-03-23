@@ -2,12 +2,12 @@ let siteData = null;
 
 async function loadData() {
   try {
-    const r = await fetch('/data/site.json');
+    const r = await fetch('/assets/data/site.json');
     siteData = await r.json();
   } catch(e) {
     // fallback: try relative path
     try {
-      const r2 = await fetch('/data/site.json');
+      const r2 = await fetch('/assets/data/site.json');
       siteData = await r2.json();
     } catch(e2) { console.warn('Could not load site data'); }
   }
