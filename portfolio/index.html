@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Portfolio - MARKETİFAİ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="page-hero">
+  <div class="page-tag">Portfolio</div>
+  <h1>İşlərimiz</h1>
+  <p>Müştərilərimiz üçün həyata keçirdiyimiz uğurlu layihələr.</p>
+</div>
+<section class="section">
+  <div class="portfolio-empty">
+    <div style="font-size:48px;margin-bottom:16px;">🚀</div>
+    <h3>Tezliklə</h3>
+    <p>Portfolio layihələri hazırlanır. Yaxın vaxtda burada görüntülənəcək.</p>
+  </div>
+</section>
+<footer id="footer"></footer>
+<script src="/assets/js/main.js"></script>
+<script>
+(async () => {
+  const d = await loadData();
+  renderNav(d, 'Portfolio');
+  renderFooter(d);
+})();
+</script>
+</body>
+</html>

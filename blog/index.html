@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bloq - MARKETİFAİ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="page-hero">
+  <div class="page-tag">Bloq</div>
+  <h1>Faydalı Məqalələr</h1>
+  <p>Rəqəmsal marketinq, SEO, sosial media və daha çox mövzuda ekspert məsləhətləri.</p>
+</div>
+<section class="section">
+  <div class="blog-grid" id="blogGrid"></div>
+</section>
+<footer id="footer"></footer>
+<script src="/assets/js/main.js"></script>
+<script>
+(async () => {
+  const d = await loadData();
+  renderNav(d, 'Bloq');
+  renderFooter(d);
+  document.getElementById('blogGrid').innerHTML = d.blog.map(b => `
+    <div class="blog-card">
+      <div class="blog-date">📝 ${b.date}</div>
+      <h3>${b.title}</h3>
+      <p>${b.excerpt}</p>
+      <span class="blog-read">Ətraflı Oxu →</span>
+    </div>`).join('');
+})();
+</script>
+</body>
+</html>

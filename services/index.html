@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Xidmətlər - MARKETİFAİ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+
+<div class="page-hero">
+  <div class="page-tag">Xidmətlər</div>
+  <h1>Brendinizi Böyüdən Xidmətlər</h1>
+  <p>Data-driven strategiyalar, yaradıcı həllər və ölçülə bilən nəticələr ilə rəqəmsal dünyada öndə olun.</p>
+</div>
+
+<section class="section">
+  <div class="services-grid" id="servicesGrid"></div>
+</section>
+
+<section class="section" style="background:var(--dark2);margin:0;padding:80px 40px;">
+  <div class="section-label">Prosesimiz</div>
+  <h2>Necə İşləyirik</h2>
+  <p class="section-sub">Şəffaf, nəticəyönümlü iş prosesi ilə hər addımda yanınızdayıq.</p>
+  <div class="process-grid">
+    <div class="process-step"><div class="step-num">01</div><h3>Analiz</h3><p>Biznesinizi, rəqiblərinizi və hədəf auditoriyasını dərindən öyrənirik.</p></div>
+    <div class="process-step"><div class="step-num">02</div><h3>Strategiya</h3><p>Xüsusi məqsədlərinizə uyğun data-driven strategiya hazırlayırıq.</p></div>
+    <div class="process-step"><div class="step-num">03</div><h3>İcra</h3><p>Strategiyanı peşəkar komandamızla dəqiq və effektiv şəkildə həyata keçiririk.</p></div>
+    <div class="process-step"><div class="step-num">04</div><h3>Optimallaşdırma</h3><p>Nəticələri daim izləyir, analiz edir və performansı artırırıq.</p></div>
+  </div>
+</section>
+
+<div class="cta-section" style="margin-top:60px;">
+  <h2>Layihənizi Başlayaq</h2>
+  <p>Pulsuz konsultasiya üçün bizimlə əlaqə saxlayın. 24 saat ərzində cavab veririk.</p>
+  <div class="btn-group" style="justify-content:center;">
+    <a href="/brief/" class="btn-primary">Brief Göndər</a>
+    <a href="/contact/" class="btn-secondary">Əlaqə Saxla</a>
+  </div>
+</div>
+
+<footer id="footer"></footer>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(async () => {
+  const d = await loadData();
+  renderNav(d, 'Xidmətlər');
+  renderFooter(d);
+  document.getElementById('servicesGrid').innerHTML = d.services.map(s => `
+    <div class="service-card" id="${s.slug}">
+      <div class="service-icon">${s.icon}</div>
+      <h3>${s.title}</h3>
+      <p>${s.description}</p>
+      <a href="/contact/?service=${s.slug}" style="display:inline-block;margin-top:16px;font-size:13px;color:var(--primary);font-weight:600;">Ətraflı məlumat →</a>
+    </div>`).join('');
+})();
+</script>
+</body>
+</html>

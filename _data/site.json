@@ -1,0 +1,144 @@
+{
+  "company": {
+    "name": "MARKETİFAİ",
+    "tagline": "AI Dəstəkli Rəqəmsal Marketinq Agentliyi",
+    "email": "marketifai.group@gmail.com",
+    "phone": "+994 50 483 48 30",
+    "whatsapp": "994504834830",
+    "address": "Bakı, Azərbaycan",
+    "working_hours": "B.ertəsi–Cümə: 09:00–18:00",
+    "logo": "https://d2xsxph8kpxj0f.cloudfront.net/310519663454683635/7poE97QmGi6zXhGS6gnH9J/marketifai-logo_b4471bc3.jpeg"
+  },
+  "hero": {
+    "badge": "AI Dəstəkli Marketinq",
+    "title": "Brendinizi Rəqəmsal Dünyada Zirvəyə Çatdırırıq",
+    "subtitle": "SEO, sosial media, PPC və content marketing sahəsində data-driven strategiyalar. Ölçülə bilən nəticələr, şəffaf hesabat.",
+    "btn_primary": "Pulsuz Konsultasiya",
+    "btn_secondary": "İşlərimizə Bax"
+  },
+  "stats": [
+    { "value": "200+", "label": "Uğurlu Layihə" },
+    { "value": "150+", "label": "Aktiv Müştəri" },
+    { "value": "8", "label": "İl Təcrübə" },
+    { "value": "340+", "label": "Müştəri Məmnuniyyəti" }
+  ],
+  "clients": ["PRESTIGE GROUP ESTATE", "MENTOR ACADEMY", "GARDASHLAR MEBEL", "INNOMEDSTORE", "ZILLI RATAN DESIGN"],
+  "services": [
+    {
+      "icon": "🔍",
+      "title": "Axtarış Motoru Optimizasiyası (SEO)",
+      "description": "Saytınızı Google-da birinci səhifəyə çıxarırıq. Texniki SEO, açar söz strategiyası və keyfiyyətli backlink quruculuğu ilə üzvi trafikinizi artırırıq.",
+      "slug": "seo-optimization"
+    },
+    {
+      "icon": "📱",
+      "title": "Sosial Media İdarəetməsi",
+      "description": "Instagram, Facebook, LinkedIn, TikTok və digər platformalarda brendinizin güclü sosial media varlığını qururuq. Cəlbedici məzmun, cəmiyyət idarəetməsi və hədəflənmiş reklamlar.",
+      "slug": "social-media-management"
+    },
+    {
+      "icon": "✍️",
+      "title": "Məzmun Marketinqi",
+      "description": "Hədəf auditoriyənizi cəlb edən, maarifləndirən və dönüşümə sövq edən keyfiyyətli məzmun yaradırıq. Blog yazıları, e-kitablar, infografiklər, videolar və daha çox.",
+      "slug": "content-marketing"
+    },
+    {
+      "icon": "🎯",
+      "title": "PPC Reklam İdarəetməsi",
+      "description": "Google Ads, Meta Ads, LinkedIn Ads və digər platformalarda yüksək ROI-li ödənişli reklam kampaniyaları idarə edirik. Hər manatınızı maksimum effektlə işlədirik.",
+      "slug": "ppc-advertising"
+    },
+    {
+      "icon": "💻",
+      "title": "Veb Dizayn və İnkişaf",
+      "description": "Brendinizi əks etdirən, sürətli, mobil uyğun və dönüşüm optimallaşdırılmış veb saytlar yaradırıq. UI/UX dizayn, frontend inkişaf və CMS inteqrasiyası.",
+      "slug": "web-design-development"
+    },
+    {
+      "icon": "📧",
+      "title": "E-poçt Marketinqi",
+      "description": "Yüksək açılma nisbətli, dönüşüm sövq edən e-poçt kampaniyaları hazırlayırıq. Avtomatlaşdırılmış e-poçt axınları, seqmentasiya və A/B testlər.",
+      "slug": "email-marketing"
+    },
+    {
+      "icon": "🎨",
+      "title": "Brend Kimliyi və Dizayn",
+      "description": "Brendinizin unikal kimliğini yaradırıq. Logo dizayn, rəng palitras, tipografiya, brend bələdçisi və bütün marketinq materiallarının dizaynı.",
+      "slug": "brand-identity"
+    },
+    {
+      "icon": "📊",
+      "title": "Analitika və Hesabatlar",
+      "description": "Rəqəmsal marketinq fəaliyyətlərinizin tam mənzərəsini görün. Google Analytics 4, Data Studio hesabatları, KPI izləmə və məlumat əsaslı qərar qəbulu.",
+      "slug": "analytics-reporting"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Anar Həsənov",
+      "role": "CEO, TechStart AZ",
+      "text": "MARKETİFAİ ilə işləmək bizim üçün çox dəyərli oldu. 6 ay ərzində organik trafikimiz 3 dəfə artdı. Peşəkar komanda, şəffaf hesabat."
+    },
+    {
+      "name": "Leyla Məmmədova",
+      "role": "Marketing Director, Fashion House",
+      "text": "Sosial media kampaniyalarımız sayəsində satışlarımız 200% artdı. Kreativ yanaşma və peşəkar komanda ilə işləmək həqiqətən zövqlüdür."
+    },
+    {
+      "name": "Rauf Əliyev",
+      "role": "Founder, BuildPro",
+      "text": "Google reklamlarımızın ROI-si 400%-ə çatdı. Gözləntilərimi tam aşdılar. Hər ay yeni rekordlar qırılır."
+    },
+    {
+      "name": "Nigar Quliyeva",
+      "role": "CMO, EduTech Baku",
+      "text": "SEO xidmətləri sayəsində saytımız 6 ayda Google-da ilk 3-ə çıxdı. Nəticələr danışmaz."
+    }
+  ],
+  "faq": [
+    {
+      "question": "MARKETİFAİ hansı xidmətləri təklif edir?",
+      "answer": "SEO, sosial media idarəetməsi, məzmun marketinqi, PPC reklam, veb dizayn, e-poçt marketinqi, brend kimliyi və analitika xidmətləri göstəririk."
+    },
+    {
+      "question": "Nə qədər müddətdə nəticə görə bilərəm?",
+      "answer": "İlk nəticələri 30 gün ərzində görün. SEO üçün 3-6 ay, reklam kampaniyaları üçün isə daha qısa müddətdə nəticə əldə edilir."
+    },
+    {
+      "question": "Qiymətlər necə müəyyən edilir?",
+      "answer": "Qiymətlər layihənin həcminə, xidmət növünə və müddətinə görə fərqlənir. Pulsuz konsultasiya üçün bizimlə əlaqə saxlayın."
+    },
+    {
+      "question": "Əməkdaşlıq prosesi necə başlayır?",
+      "answer": "Əvvəlcə pulsuz konsultasiya keçiririk, biznesinizi öyrənirik, sonra fərdi strategiya hazırlayırıq."
+    },
+    {
+      "question": "Hansı bazarlarda xidmət göstərirsiniz?",
+      "answer": "Azərbaycan, Rusiya və İngilis dilli bazarlarda xidmət göstəririk. AZ, EN, RU bazarlarında eyni anda böyüyün."
+    },
+    {
+      "question": "Hesabatlar necə verilir?",
+      "answer": "Hər həftə detallı performans hesabatı veririk. Google Analytics, Data Studio vasitəsilə şəffaf hesabat sistemimiz mövcuddur."
+    }
+  ],
+  "blog": [
+    {
+      "title": "Sosial Media Strategiyası 2025: Brendinizi Rəqiblərindən Fərqləndirin",
+      "excerpt": "TikTok, Instagram Reels, LinkedIn və digər platformalarda 2025-ci ildə effektiv sosial media strategiyası necə qurulur?",
+      "date": "2025-12-01",
+      "slug": "sosial-media-strategiyasi-2025"
+    },
+    {
+      "title": "Google Ads ROI-ni Artırmaq: Peşəkarların İstifadə Etdiyi 10 Strategiya",
+      "excerpt": "Google Ads büdcənizi boşa xərcləməyin. Keyfiyyət skoru, açar söz mənfi siyahıları, reklam uzantıları ilə ROI-nizi maksimallaşdırın.",
+      "date": "2025-11-15",
+      "slug": "google-ads-roi"
+    },
+    {
+      "title": "2025-ci ildə SEO: Tam Bələdçi – Google Sıralamalarını Artırmaq üçün Hər Şey",
+      "excerpt": "Google alqoritmlərinin son yenilikləri, AI-dəstəkli axtarış, E-E-A-T siqnalları və 2025-ci ildə SEO strategiyanızı necə qurmaq lazımdır.",
+      "date": "2025-11-01",
+      "slug": "seo-tam-beledci-2025"
+    }
+  ]
+}

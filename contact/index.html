@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Əlaqə - MARKETİFAİ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+
+<div class="page-hero">
+  <div class="page-tag">Əlaqə</div>
+  <h1>Bizimlə Əlaqə</h1>
+  <p>Layihənizi müzakirə etmək üçün bizimlə əlaqə saxlayın. Pulsuz konsultasiya verməkdən məmnunuq.</p>
+</div>
+
+<section class="section">
+  <div class="contact-grid">
+    <div>
+      <div class="contact-info-card">
+        <h2>Əlaqə Məlumatları</h2>
+        <div class="contact-item">
+          <div class="contact-icon">✉</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value" id="contactEmail"></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-item-label">Telefon / WhatsApp</div>
+            <div class="contact-item-value" id="contactPhone"></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Ünvan</div>
+            <div class="contact-item-value" id="contactAddress"></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-item-label">İş Saatları</div>
+            <div class="contact-item-value" id="contactHours"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Mesaj Göndər</h2>
+      <div id="formSuccess" class="form-success">
+        ✓ Mesajınız göndərildi! 24 saat ərzində sizinlə əlaqə saxlayacağıq.
+      </div>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Ad Soyad *</label>
+            <input type="text" required placeholder="Adınız Soyadınız">
+          </div>
+          <div class="form-group">
+            <label>E-poçt *</label>
+            <input type="email" required placeholder="email@nümunə.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Telefon</label>
+            <input type="tel" placeholder="+994 XX XXX XX XX">
+          </div>
+          <div class="form-group">
+            <label>Şirkət Adı</label>
+            <input type="text" placeholder="Şirkətinizin adı">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Xidmət Seçin</label>
+          <select id="serviceSelect">
+            <option value="">Seçin</option>
+            <option>SMM</option>
+            <option>Performance Marketing</option>
+            <option>Branding</option>
+            <option>Web Development</option>
+            <option>SEO</option>
+            <option>Content Production</option>
+            <option>Strategy &amp; Consulting</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Büdcə Aralığı</label>
+          <select>
+            <option value="">Seçin</option>
+            <option>$200 – $500</option>
+            <option>$500 – $1,500</option>
+            <option>$1,500 – $3,000</option>
+            <option>$3,000 – $7,000</option>
+            <option>$7,000+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mesajınız</label>
+          <textarea placeholder="Layihəniz haqqında məlumat verin..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">Göndər →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+
+<script src="/assets/js/main.js"></script>
+<script>
+(async () => {
+  const d = await loadData();
+  renderNav(d, 'Əlaqə');
+  renderFooter(d);
+  const c = d.company;
+  document.getElementById('contactEmail').innerHTML = `<a href="mailto:${c.email}" style="color:var(--primary)">${c.email}</a>`;
+  document.getElementById('contactPhone').innerHTML = `<a href="https://wa.me/${c.whatsapp}" style="color:var(--primary)">${c.phone}</a>`;
+  document.getElementById('contactAddress').textContent = c.address;
+  document.getElementById('contactHours').textContent = c.working_hours;
+
+  // Pre-select service from URL
+  const params = new URLSearchParams(location.search);
+  if (params.get('service')) {
+    const sel = document.getElementById('serviceSelect');
+    const slug = params.get('service');
+    const svc = d.services.find(s => s.slug === slug);
+    if (svc) {
+      const opt = document.createElement('option');
+      opt.value = svc.slug; opt.textContent = svc.title.split('(')[0].trim(); opt.selected = true;
+      sel.prepend(opt);
+    }
+  }
+  initContactForm();
+})();
+</script>
+</body>
+</html>

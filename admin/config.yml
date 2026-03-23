@@ -1,0 +1,85 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+locale: az
+
+collections:
+  - name: "settings"
+    label: "⚙️ Sayt Ayarları"
+    files:
+      - name: "site"
+        label: "Sayt Məzmunu"
+        file: "assets/data/site.json"
+        format: json
+        fields:
+          - label: "🏢 Şirkət Məlumatları"
+            name: "company"
+            widget: "object"
+            fields:
+              - { label: "Şirkət Adı", name: "name", widget: "string" }
+              - { label: "Slogan", name: "tagline", widget: "string" }
+              - { label: "E-poçt", name: "email", widget: "string" }
+              - { label: "Telefon", name: "phone", widget: "string" }
+              - { label: "WhatsApp (rəqəmlər)", name: "whatsapp", widget: "string", hint: "Misal: 994501234567" }
+              - { label: "Ünvan", name: "address", widget: "string" }
+              - { label: "İş Saatları", name: "working_hours", widget: "string" }
+              - { label: "Logo URL", name: "logo", widget: "string" }
+
+          - label: "🎯 Ana Səhifə Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Üst Badge Mətni", name: "badge", widget: "string" }
+              - { label: "Başlıq", name: "title", widget: "string" }
+              - { label: "Alt Mətn", name: "subtitle", widget: "text" }
+              - { label: "Əsas Düymə", name: "btn_primary", widget: "string" }
+              - { label: "Köməkçi Düymə", name: "btn_secondary", widget: "string" }
+
+          - label: "📊 Statistikalar"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Rəqəm", name: "value", widget: "string" }
+              - { label: "Başlıq", name: "label", widget: "string" }
+
+          - label: "🤝 Müştəri Adları (logolar sırası)"
+            name: "clients"
+            widget: "list"
+            field: { label: "Müştəri Adı", name: "client", widget: "string" }
+
+          - label: "🛠️ Xidmətlər"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "İkon (emoji)", name: "icon", widget: "string" }
+              - { label: "Xidmət Adı", name: "title", widget: "string" }
+              - { label: "Açıqlama", name: "description", widget: "text" }
+              - { label: "Slug (URL)", name: "slug", widget: "string" }
+
+          - label: "⭐ Müştəri Rəyləri"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Ad Soyad", name: "name", widget: "string" }
+              - { label: "Vəzifə / Şirkət", name: "role", widget: "string" }
+              - { label: "Rəy Mətni", name: "text", widget: "text" }
+
+          - label: "❓ FAQ (Tez-tez Verilən Suallar)"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Sual", name: "question", widget: "string" }
+              - { label: "Cavab", name: "answer", widget: "text" }
+
+          - label: "📝 Bloq Yazıları"
+            name: "blog"
+            widget: "list"
+            fields:
+              - { label: "Başlıq", name: "title", widget: "string" }
+              - { label: "Qısa Mətn", name: "excerpt", widget: "text" }
+              - { label: "Tarix", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+              - { label: "Slug (URL)", name: "slug", widget: "string" }

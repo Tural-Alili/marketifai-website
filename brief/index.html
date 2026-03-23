@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Brief Göndər - MARKETİFAİ</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<nav id="nav"></nav>
+<div class="page-hero">
+  <div class="page-tag">Brief</div>
+  <h1>Brief Göndər</h1>
+  <p>Layihəniz haqqında ətraflı məlumat verin, sizə uyğun həll təklif edək.</p>
+</div>
+<section class="section">
+  <div class="brief-form">
+    <div id="briefSuccess" class="form-success">✓ Briefiniz göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.</div>
+    <form id="briefForm">
+      <div class="form-group"><label>Ad Soyad *</label><input type="text" required placeholder="Adınız Soyadınız"></div>
+      <div class="form-group"><label>E-poçt *</label><input type="email" required placeholder="email@nümunə.com"></div>
+      <div class="form-group"><label>Telefon</label><input type="tel" placeholder="+994 XX XXX XX XX"></div>
+      <div class="form-group"><label>Şirkət / Brend Adı *</label><input type="text" required></div>
+      <div class="form-group">
+        <label>Xidmət Növü *</label>
+        <select required id="briefService">
+          <option value="">Seçin</option>
+          <option>SEO</option><option>SMM</option><option>PPC / Reklam</option>
+          <option>Veb Dizayn</option><option>Brending</option><option>Məzmun Marketinqi</option><option>Kompleks Paket</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Büdcə Aralığı</label>
+        <select><option value="">Seçin</option><option>$200–$500</option><option>$500–$1,500</option><option>$1,500–$3,000</option><option>$3,000–$7,000</option><option>$7,000+</option></select>
+      </div>
+      <div class="form-group"><label>Hədəf / Məqsəd</label><textarea placeholder="Nəyə nail olmaq istəyirsiniz?"></textarea></div>
+      <div class="form-group"><label>Rəqiblər</label><input type="text" placeholder="Əsas rəqiblərinizin saytları"></div>
+      <div class="form-group"><label>Əlavə Qeydlər</label><textarea placeholder="Əlavə məlumat, xüsusi istəklər..."></textarea></div>
+      <button type="submit" class="form-submit">Brief Göndər →</button>
+    </form>
+  </div>
+</section>
+<footer id="footer"></footer>
+<script src="/assets/js/main.js"></script>
+<script>
+(async () => {
+  const d = await loadData();
+  renderNav(d, '');
+  renderFooter(d);
+  const form = document.getElementById('briefForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.form-submit');
+    btn.textContent = 'Göndərilir...'; btn.disabled = true;
+    await new Promise(r => setTimeout(r, 1000));
+    form.style.display = 'none';
+    document.getElementById('briefSuccess').style.display = 'block';
+  });
+})();
+</script>
+</body>
+</html>
