@@ -3,7 +3,7 @@
     "name": "MARKETİFAİ",
     "tagline": "AI Dəstəkli Rəqəmsal Marketinq Agentliyi",
     "email": "marketifai.group@gmail.com",
-    "phone": "+994 50 483 48 30",
+    "phone": "+994 50 483 48 31",
     "whatsapp": "994504834830",
     "address": "Bakı, Azərbaycan",
     "working_hours": "B.ertəsi–Cümə: 09:00–18:00",
@@ -17,12 +17,30 @@
     "btn_secondary": "İşlərimizə Bax"
   },
   "stats": [
-    { "value": "200+", "label": "Uğurlu Layihə" },
-    { "value": "150+", "label": "Aktiv Müştəri" },
-    { "value": "8", "label": "İl Təcrübə" },
-    { "value": "340+", "label": "Müştəri Məmnuniyyəti" }
+    {
+      "value": "200+",
+      "label": "Uğurlu Layihə"
+    },
+    {
+      "value": "150+",
+      "label": "Aktiv Müştəri"
+    },
+    {
+      "value": "8",
+      "label": "İl Təcrübə"
+    },
+    {
+      "value": "340+",
+      "label": "Müştəri Məmnuniyyəti"
+    }
   ],
-  "clients": ["PRESTIGE GROUP ESTATE", "MENTOR ACADEMY", "GARDASHLAR MEBEL", "INNOMEDSTORE", "ZILLI RATAN DESIGN"],
+  "clients": [
+    "PRESTIGE GROUP ESTATE",
+    "MENTOR ACADEMY",
+    "GARDASHLAR MEBEL",
+    "INNOMEDSTORE",
+    "ZILLI RATAN DESIGN"
+  ],
   "services": [
     {
       "icon": "🔍",
